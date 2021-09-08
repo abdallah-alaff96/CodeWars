@@ -1,0 +1,4 @@
+important Methods To Study:
+
+- str.replace(x,y);
+- arr.splice;
