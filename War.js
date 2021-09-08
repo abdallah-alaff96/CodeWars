@@ -521,7 +521,7 @@ function scramble(str1, str2) {
   return false;
 }
 
-// solution2
+// solution2 - the submitted one ( to codeWars web page)
 // function scramble(str1, str2) {
 //   const count = {}
 //   str2.split('').forEach((c) => {
