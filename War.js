@@ -4,16 +4,16 @@
 // regex examples (regex lab):
 
 // regex1:
-const parag = 'bacon';
+const parag = 'boacn';
 const var2 = /[^abc]/g; // returns all (all: because of "g") characters except abc
 const found = parag.match(var2);
 // console.log(found);
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // regex2:
-const regex2 = /[aeiou]/g;
 function getCount(str) {
-  return str.match(regex) ? str.match(regex).length : 0;
+  const regex2 = /[aeiou]/g;
+  return str.match(regex2) ? str.match(regex2).length : 0;
 }
 // console.log(getCount('abracadabra')); // 5
 // console.log(getCount('my pyx')); // 5
@@ -509,4 +509,39 @@ function orderWeight(strng) {
 // );
 // console.log(orderWeight('2000 10003 1234000 44444444 9999 11 11 22 123')); //'11 11 2000 10003 22 123 1234000 44444444 9999'
 // console.log(orderWeight(' '));
+// =------------=-=-=-=-=----------------------------------------------------
+
+// Scramblies - 5kyu
+function scramble(str1, str2) {
+  const regex = new RegExp(`[${str1}]`, 'g');
+  const str1Arr = str2.match(regex);
+  if (str1Arr == '' || str2 == '' || str1Arr == false || str2 == false)
+    return false;
+  else if (str1Arr.length == str2.length) return true;
+  return false;
+}
+
+// solution2
+// function scramble(str1, str2) {
+//   const count = {}
+//   str2.split('').forEach((c) => {
+//     count[c] = count[c] ? (count[c] += 1) : 1
+//   })
+//   str1.split('').forEach((c) => {
+//     count[c] && count[c]--
+//   })
+//   return Object.keys(count).every((key) => count[key] === 0)
+// }
+
+// console.log(scramble('', '')); //,false);
+// console.log(scramble('krqodlw', 'world')); //,true);
+// console.log(scramble('krqodl', 'world')); //,flase);
+// console.log(scramble('cedewaraaossoqqyt', 'codewars')); //,true);
+// console.log(scramble('katas', 'steak')); //,false);
+// console.log(scramble('scriptjava', 'javascript')); //,true);
+// console.log(scramble('scriptingjava', 'javascript')); //,true);
+// console.log(scramble('scriptsjava', 'javascripts')); //,true);
+// console.log(scramble('jscripts', 'javascript')); //,false);
+// console.log(scramble('aabbcamaomsccdd', 'commas')); //,true);
+
 // =------------=-=-=-=-=----------------------------------------------------
