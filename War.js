@@ -559,5 +559,22 @@ function scramble(str1, str2) {
 // console.log(scramble('aabbcamaomsccdd', 'commas')); //,true);
 
 // =------------=-=-=-=-=----------------------------------------------------
+//Convert string to camel case - 6kyu
+function toCamelCase(str) {
+  const regex = /(_|-)[a-z]/i;
+  while (str.includes('_')) {
+    str = str.replace(regex, str[str.indexOf('_') + 1].toUpperCase());
+  }
+  while (str.includes('-')) {
+    // str = str.replace(regex, str[str.indexOf('_') + 1].toUpperCase());
+    str = str.replace(regex, str[str.indexOf('-') + 1].toUpperCase());
+  }
+  return str;
+}
+
+// console.log(toCamelCase('')); //'', 'An empty string was provided but not returned'
+// console.log(toCamelCase('the_stealth_warrior')); //'theStealthWarrior', "toCamelCase('the_stealth_warrior') did not return correct value"
+// console.log(toCamelCase('The-Stealth-Warrior')); //'TheStealthWarrior', "toCamelCase('The-Stealth-Warrior') did not return correct value"
+// console.log(toCamelCase('A-B-C')); //'ABC', "toCamelCase('A-B-C') did not return correct value"
 
 // =------------=-=-=-=-=----------------------------------------------------
