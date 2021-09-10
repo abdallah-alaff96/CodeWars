@@ -578,3 +578,18 @@ function toCamelCase(str) {
 // console.log(toCamelCase('A-B-C')); //'ABC', "toCamelCase('A-B-C') did not return correct value"
 
 // =------------=-=-=-=-=----------------------------------------------------
+
+//Regex count lowercase letters - 8kyu
+function lowercaseCount(str) {
+  const regex = /[a-z]/g;
+  return str.match(regex) ? str.match(regex).length : 0;
+}
+
+// console.log(lowercaseCount('abc')); // 3);
+// console.log(lowercaseCount('abcABC123')); // 3);
+// console.log(lowercaseCount("abcABC123!@€£#$%^&*()_-+=}{[]|':;?/>.<,~")); // 3);
+// console.log(lowercaseCount('')); // 0)
+// console.log(lowercaseCount("ABC123!@€£#$%^&*()_-+=}{[]|':;?/>.<,~")); // 0)
+// console.log(lowercaseCount('abcdefghijklmnopqrstuvwxyz')); // 26);
+
+// =------------=-=-=-=-=----------------------------------------------------
