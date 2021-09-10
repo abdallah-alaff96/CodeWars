@@ -28,7 +28,21 @@ let ans = strr.match(regexx);
 // console.log(ans);
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// regex4
+//Disemvowel Trolls - 7kyu
+function disemvowel(str) {
+  return str.match(/[^aeiou]/gi).join(''); // "g" to match all. "i" to make case-insensitive
+}
+// console.log(disemvowel('This website is for losers LOL!')); //,('Ths wbst s fr lsrs LL!');
+// console.log(
+//   disemvowel("No offense but,\nYour writing is among the worst I've ever read")
+// );
+// console.log("N ffns bt,\nYr wrtng s mng th wrst 'v vr rd");
+// console.log(disemvowel('What are you, a communist?')); //,('Wht r y,  cmmnst?');
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // =------------=-=-=-=-=-----------------------------------------------------
 
 // function removeChar(str) {
@@ -543,5 +557,7 @@ function scramble(str1, str2) {
 // console.log(scramble('scriptsjava', 'javascripts')); //,true);
 // console.log(scramble('jscripts', 'javascript')); //,false);
 // console.log(scramble('aabbcamaomsccdd', 'commas')); //,true);
+
+// =------------=-=-=-=-=----------------------------------------------------
 
 // =------------=-=-=-=-=----------------------------------------------------
